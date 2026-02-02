@@ -1,14 +1,14 @@
-import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
-  View,
   Text,
   TextInput,
   TouchableOpacity,
+  View,
 } from "react-native";
 import { styles } from "../../styles/login.styles";
-import { useRouter } from "expo-router";
 export default function Login() {
   const [secure, setSecure] = useState(true);
   const router = useRouter();
@@ -65,7 +65,7 @@ export default function Login() {
         </View>
 
         {/* Sign In Button */}
-        <TouchableOpacity activeOpacity={0.9} onPress={() => router.replace("/(tabs)")}>
+        <TouchableOpacity activeOpacity={0.9} onPress={() => router.replace("/(tabs)/profile")}>
           <LinearGradient
             colors={["#ff8c00", "#ff6a00"]}
             style={styles.button}
